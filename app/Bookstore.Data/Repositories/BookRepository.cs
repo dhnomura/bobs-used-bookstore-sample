@@ -118,7 +118,7 @@ namespace Bookstore.Data.Repositories
 
             if (string.IsNullOrWhiteSpace(book.CoverImageUrl))
             {
-                dbContext.Entry(existing).Property(x => x.CoverImageUrl).IsModified = false;
+                dbContext.Entry(existing).Property("coverimageurl").IsModified = false;
             }
         }
 
